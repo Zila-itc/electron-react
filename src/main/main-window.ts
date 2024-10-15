@@ -27,11 +27,13 @@ const showMainWindow = () => {
 
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      sandbox: false,
     },
+    
   });
   context.mainWindow = mainWindow;
   context.mainWindow.on('close', (event) => {
@@ -47,6 +49,8 @@ function createMainWindow() {
   });
   if (isDevelopment) {
     mainWindow.loadURL('http://localhost:8000');
+    mainWindow.webContents.openDevTools();
+
   } else {
     createProtocol('app');
     mainWindow.loadURL('app://./index.html');

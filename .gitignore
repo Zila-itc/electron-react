@@ -11,3 +11,7 @@
 /dist_electron
 /.mfsu
 pnpm-lock.yaml
+
+.env
+
+/**/*-locale.json

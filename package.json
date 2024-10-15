@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "max dev",
+    "dev": "yarn electron:dev",
     "build": "max build",
     "postinstall": "max setup",
     "start": "npm run dev",
@@ -9,26 +9,34 @@
     "electron:init": "max electron init",
     "electron:dev": "max dev electron",
     "electron:dir": "max build electron --dir",
-    "electron:build:win": "max build electron --win",
     "electron:build:mac": "max build electron --mac",
     "electron:build:linux": "max build electron --linux",
-    "update:deps": "pnpm update --interactive --latest"
+    "electron:build:win": "max build electron --win"
   },
   "dependencies": {
-    "@umijs/max": "^4.3.20"
+    "@umijs/max": "^4.3.26",
+    "@ant-design/pro-components": "^2.7.19",
+    "ahooks":"^3.8.1",
+    "antd": "^5.21.4",
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@liangskyli/umijs-plugin-electron": "^0.4.0",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
-    "@umijs/lint": "^4.3.17",
-    "electron": "^22.3.18",
+    "@umijs/lint": "^4.3.26",
+    "electron": "^33.0.0",
     "electron-builder": "^23.6.0",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^3.2.4",
     "prettier-plugin-packagejson": "^2.5.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "tailwindcss": "^3.4.13",
+    "dotenv": "^16.4.5",
+    "glob": "7.2.3",
+    "fs-extra": "^11.2.0",
+    "@babel/core":"^7.25.8"
   },
-  "name": "umi_electron_app",
-  "version": "0.0.1"
+  "name": "i18n-sync",
+  "version": "0.0.3"
 }

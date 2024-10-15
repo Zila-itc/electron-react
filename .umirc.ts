@@ -1,9 +1,15 @@
-import { defineConfig } from '@umijs/max';
+import { defineConfig } from "@umijs/max";
 
 export default defineConfig({
-  npmClient: 'yarn',
-  plugins: ['@liangskyli/umijs-plugin-electron'],
+  npmClient: "yarn",
+  plugins: ["@liangskyli/umijs-plugin-electron"],
   electron: {
-    routerMode: 'memory',
+    routerMode: "memory",
+    externals: [
+      'glob',
+    ]
   },
+  mako: false,
+  antd: {},
+  tailwindcss: {},
 });

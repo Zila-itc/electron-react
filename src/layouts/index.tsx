@@ -1,20 +1,8 @@
-import { Link, Outlet } from '@umijs/max';
-import styles from './index.less';
+import { Outlet } from '@umijs/max';
 
 export default function Layout() {
   return (
-    <div className={styles.navs}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/liangskyli/umi-electron">Github</a>
-        </li>
-      </ul>
+    <div className='p-10'>
       <Outlet />
     </div>
   );
